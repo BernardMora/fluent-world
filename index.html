@@ -5,163 +5,634 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FluentWorld - Aprende un Nuevo Idioma, Vive una Nueva Cultura</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .hero-section {
+        background: linear-gradient(
+          rgba(59, 130, 246, 0.9),
+          rgba(37, 99, 235, 0.9)
+        );
+      }
+      .fade-in {
+        animation: fadeIn 1s ease-in;
+      }
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      @keyframes blob {
+        0% {
+          transform: translate(0px, 0px) scale(1);
+        }
+        33% {
+          transform: translate(30px, -50px) scale(1.1);
+        }
+        66% {
+          transform: translate(-20px, 20px) scale(0.9);
+        }
+        100% {
+          transform: translate(0px, 0px) scale(1);
+        }
+      }
+      .animate-blob {
+        animation: blob 7s infinite;
+      }
+      .animation-delay-2000 {
+        animation-delay: 2s;
+      }
+      .animation-delay-4000 {
+        animation-delay: 4s;
+      }
+    </style>
   </head>
   <body class="bg-gray-100 text-gray-800 font-sans">
-    <header class="bg-blue-600 text-white py-6 mb-8">
+    <header
+      class="hero-section min-h-screen flex items-center justify-center text-white"
+    >
       <div class="container mx-auto px-4">
-        <h1 class="text-3xl font-bold">FluentWorld</h1>
-        <p class="text-lg">Aprende un Nuevo Idioma, Vive una Nueva Cultura</p>
+        <div
+          class="flex flex-col md:flex-row items-center justify-between gap-8"
+        >
+          <!-- Left side with text -->
+          <div class="md:w-1/2 text-left" data-aos="fade-right">
+            <h1 class="text-6xl font-bold mb-6 fade-in">FluentWorld</h1>
+            <p class="text-xl mb-8 fade-in max-w-xl">
+              Aprende un Nuevo Idioma, Vive una Nueva Cultura
+            </p>
+            <div class="flex gap-4">
+              <button
+                class="bg-white text-blue-600 px-8 py-3 rounded-full font-bold hover:bg-blue-50 transition duration-300"
+              >
+                Comienza Tu Viaje
+              </button>
+              <button
+                class="border-2 border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white/10 transition duration-300"
+              >
+                Ver Demo
+              </button>
+            </div>
+          </div>
+
+          <!-- Right side with image -->
+          <div class="md:w-1/2" data-aos="fade-left">
+            <img
+              src="img/gemini_2.jpeg"
+              alt="FluentWorld Learning Experience"
+              class="rounded-2xl shadow-2xl w-full object-cover max-h-[600px]"
+            />
+          </div>
+        </div>
       </div>
     </header>
 
     <main class="container mx-auto px-4 space-y-16">
-      <section class="text-center">
-        <h2 class="text-2xl font-bold mb-4">¿Qué es FluentWorld?</h2>
-        <p class="mb-6">
-          FluentWorld es una plataforma impulsada por IA que combina
-          reconocimiento de voz, IA conversacional y retroalimentación en tiempo
-          real para ayudarte a dominar un nuevo idioma a través de experiencias
-          inmersivas.
-        </p>
-        <img
-          src="img/gemini_2.jpeg"
-          alt="FluentWorld"
-          class="mb-4 rounded-lg shadow-lg w-full object-cover"
-        />
+      <section class="py-16">
+        <div class="container mx-auto px-4">
+          <div
+            class="flex flex-col md:flex-row items-center justify-between gap-12"
+          >
+            <!-- Left side with text -->
+            <div class="md:w-1/2" data-aos="fade-right">
+              <h2
+                class="text-4xl font-extrabold mb-6 text-gray-900 leading-tight"
+              >
+                ¿Qué es FluentWorld?
+              </h2>
+              <p class="text-lg text-gray-700 leading-relaxed mb-8">
+                FluentWorld es una plataforma impulsada por IA que combina
+                reconocimiento de voz, IA conversacional y retroalimentación en
+                tiempo real para ayudarte a dominar un nuevo idioma a través de
+                experiencias inmersivas.
+              </p>
+              <ul class="space-y-4 text-gray-700">
+                <li class="flex items-center">
+                  <svg
+                    class="w-6 h-6 mr-2 text-blue-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  Aprende a tu propio ritmo
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-6 h-6 mr-2 text-blue-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  Practica con IA avanzada
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-6 h-6 mr-2 text-blue-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  Recibe feedback instantáneo
+                </li>
+              </ul>
+            </div>
+
+            <!-- Right side with image -->
+            <div class="md:w-1/2" data-aos="fade-left">
+              <img
+                src="img/escena_2_gemini.jpeg"
+                alt="FluentWorld Learning Experience"
+                class="rounded-2xl shadow-xl w-full object-cover h-[500px] transform hover:scale-105 transition duration-300"
+              />
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section>
-        <h2 class="text-2xl font-bold mb-4">Características Clave</h2>
-        <ul class="space-y-4">
-          <li>
-            IA Conversacional Avanzada: Practica conversaciones naturales con
-            personajes controlados por IA que responden en tiempo real.
-          </li>
-          <li>
-            Reconocimiento de Voz Preciso: Mejora tu pronunciación mediante
-            retroalimentación instantánea.
-          </li>
-          <li>
-            Mundos Virtuales Interactivos: Explora escenarios culturales, como
-            mercados, escuelas y oficinas.
-          </li>
-          <li>
-            Aprendizaje Adaptativo: Lecciones personalizadas basadas en tu
-            progreso y ritmo.
-          </li>
-          <li>
-            Gamificación Motivadora: Completa misiones diarias, gana recompensas
-            y desbloquea nuevos niveles.
-          </li>
-        </ul>
-              <!-- Conjunto de 4 imágenes -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        <img
-          src="img/escena_3_gemini.jpeg"
-          alt="FluentWorld"
-          class="rounded-lg shadow-lg w-full object-cover"
-        />
-        <img
-          src="img/escena_4_gemini_1.jpeg"
-          alt="FluentWorld"
-          class="rounded-lg shadow-lg w-full object-cover"
-        />
-        <img
-          src="img/escena_5_gemini_1.jpeg"
-          alt="FluentWorld"
-          class="rounded-lg shadow-lg w-full object-cover"
-        />
-      </div>
-
-      <section class="text-center">
-        <h2 class="text-2xl font-bold mb-4">¿Para Quién es FluentWorld?</h2>
-        <p class="mb-6">FluentWorld es ideal para:</p>
-        <ul class="space-y-4">
-          <li>
-            Estudiantes: Mejora tu fluidez para estudios internacionales o
-            exámenes de certificación.
-          </li>
-          <li>
-            Viajeros: Aprende frases esenciales para desenvolverte en cualquier
-            parte del mundo.
-          </li>
-          <li>
-            Profesionales: Aumenta tu competitividad laboral con habilidades
-            lingüísticas avanzadas.
-          </li>
-        </ul>
-        <img
-          src="img/escena_2_gemini.jpeg"
-          alt="FluentWorld"
-          class="mb-4 rounded-lg shadow-lg w-full object-cover"
-        />
+      <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">
+            Características Clave
+          </h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+              class="bg-white p-6 rounded-lg shadow-lg"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="text-blue-600 mb-4">
+                <!-- Add icon here -->
+              </div>
+              <h3 class="font-bold text-xl mb-4">IA Conversacional Avanzada</h3>
+              <p class="text-gray-600">
+                Practica conversaciones naturales con personajes controlados por
+                IA que responden en tiempo real.
+              </p>
+            </div>
+            <div
+              class="bg-white p-6 rounded-lg shadow-lg"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="text-blue-600 mb-4">
+                <!-- Add icon here -->
+              </div>
+              <h3 class="font-bold text-xl mb-4">
+                Reconocimiento de Voz Preciso
+              </h3>
+              <p class="text-gray-600">
+                Mejora tu pronunciación mediante retroalimentación instantánea.
+              </p>
+            </div>
+            <div
+              class="bg-white p-6 rounded-lg shadow-lg"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="text-blue-600 mb-4">
+                <!-- Add icon here -->
+              </div>
+              <h3 class="font-bold text-xl mb-4">
+                Mundos Virtuales Interactivos
+              </h3>
+              <p class="text-gray-600">
+                Explora escenarios culturales, como mercados, escuelas y
+                oficinas.
+              </p>
+            </div>
+            <div
+              class="bg-white p-6 rounded-lg shadow-lg"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div class="text-blue-600 mb-4">
+                <!-- Add icon here -->
+              </div>
+              <h3 class="font-bold text-xl mb-4">Aprendizaje Adaptativo</h3>
+              <p class="text-gray-600">
+                Lecciones personalizadas basadas en tu progreso y ritmo.
+              </p>
+            </div>
+            <div
+              class="bg-white p-6 rounded-lg shadow-lg"
+              data-aos="fade-up"
+              data-aos-delay="500"
+            >
+              <div class="text-blue-600 mb-4">
+                <!-- Add icon here -->
+              </div>
+              <h3 class="font-bold text-xl mb-4">Gamificación Motivadora</h3>
+              <p class="text-gray-600">
+                Completa misiones diarias, gana recompensas y desbloquea nuevos
+                niveles.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section>
-        <h2 class="text-2xl font-bold mb-4">¿Por Qué FluentWorld?</h2>
-        <p class="mb-4">Inmersión total en escenarios realistas.</p>
-        <p class="mb-4">Feedback continuo y en tiempo real.</p>
-        <p class="mb-4">Adaptación a tu nivel y ritmo de aprendizaje.</p>
-        <p class="mb-4">
-          Experiencias divertidas y gamificadas que hacen del aprendizaje un
-          juego.
-        </p>
+      <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-12" data-aos="fade-up">
+            <h2
+              class="text-4xl font-extrabold mb-6 text-gray-900 leading-tight"
+            >
+              ¿Para Quién es FluentWorld?
+            </h2>
+            <p class="text-xl text-gray-600 mb-8">
+              FluentWorld está diseñado para todos aquellos que buscan una forma
+              innovadora de aprender idiomas
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-8 mb-16">
+            <!-- Estudiantes -->
+            <div
+              class="bg-gray-50 p-8 rounded-2xl shadow-lg transform hover:scale-105 transition duration-300"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="text-blue-600 mb-4">
+                <svg
+                  class="w-12 h-12"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 14l9-5-9-5-9 5 9 5z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 14l9-5-9-5-9 5 9 5z"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">Estudiantes</h3>
+              <p class="text-gray-600 leading-relaxed">
+                Mejora tu fluidez para estudios internacionales o exámenes de
+                certificación.
+              </p>
+            </div>
+
+            <!-- Viajeros -->
+            <div
+              class="bg-gray-50 p-8 rounded-2xl shadow-lg transform hover:scale-105 transition duration-300"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="text-blue-600 mb-4">
+                <svg
+                  class="w-12 h-12"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">Viajeros</h3>
+              <p class="text-gray-600 leading-relaxed">
+                Aprende frases esenciales para desenvolverte en cualquier parte
+                del mundo.
+              </p>
+            </div>
+
+            <!-- Profesionales -->
+            <div
+              class="bg-gray-50 p-8 rounded-2xl shadow-lg transform hover:scale-105 transition duration-300"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="text-blue-600 mb-4">
+                <svg
+                  class="w-12 h-12"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                Profesionales
+              </h3>
+              <p class="text-gray-600 leading-relaxed">
+                Aumenta tu competitividad laboral con habilidades lingüísticas
+                avanzadas.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <!-- Conjunto de 4 imágenes -->
-      <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <img
-          src="img/arabe_gemini.jpeg"
-          alt="FluentWorld"
-          class="rounded-lg shadow-lg w-full object-cover"
-        />
-        <img
-          src="img/brasil_gemini.jpeg"
-          alt="FluentWorld"
-          class="rounded-lg shadow-lg w-full object-cover"
-        />
-        <img
-          src="img/frances_gemini.jpeg"
-          alt="FluentWorld"
-          class="rounded-lg shadow-lg w-full object-cover"
-        />
-        <img
-          src="img/japones_gemini.jpeg"
-          alt="FluentWorld"
-          class="rounded-lg shadow-lg w-full object-cover"
-        />
+      <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+          <h2
+            class="text-4xl font-extrabold mb-12 text-gray-900 leading-tight text-center"
+            data-aos="fade-up"
+          >
+            ¿Por Qué FluentWorld?
+          </h2>
+
+          <!-- First item - Text left, Image right -->
+          <div
+            class="flex flex-col md:flex-row items-center justify-between gap-12 mb-16"
+            data-aos="fade-right"
+          >
+            <div class="md:w-1/2 text-center pl-20">
+              <!-- Added text-center -->
+              <p
+                class="text-2xl text-blue-600 leading-relaxed font-semibold bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text text-transparent hover:from-blue-600 hover:to-blue-800 transition-colors duration-300"
+              >
+                <!-- Enhanced text styling -->
+                Inmersión total en escenarios realistas con ambientes 3D
+                detallados y situaciones cotidianas.
+              </p>
+            </div>
+            <div class="md:w-1/2 flex justify-center pr-20">
+              <!-- Added flex and justify-center -->
+              <div class="w-100 h-100">
+                <!-- Fixed size container -->
+                <img
+                  src="img/frances_gemini.jpeg"
+                  alt="Aprendizaje Adaptativo"
+                  class="w-full h-full object-cover rounded-xl shadow-lg hover:scale-105 transition-all duration-300 hover:shadow-blue-400/50 hover:shadow-xl"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex flex-col md:flex-row items-center justify-between gap-12 mb-16"
+            data-aos="fade-right"
+          >
+            <div class="md:w-1/2 flex justify-center pl-20">
+              <!-- Added flex and justify-center -->
+              <div class="w-100 h-100">
+                <!-- Fixed size container -->
+                <img
+                  src="img/escena_5_gemini_1.jpeg"
+                  alt="Aprendizaje Adaptativo"
+                  class="w-full h-full object-cover rounded-xl shadow-lg hover:scale-105 transition-all duration-300 hover:shadow-blue-400/50 hover:shadow-xl"
+                />
+              </div>
+            </div>
+            <div class="md:w-1/2 text-center pr-20">
+              <!-- Added text-center -->
+              <p
+                class="text-2xl text-blue-600 leading-relaxed font-semibold bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text text-transparent hover:from-blue-600 hover:to-blue-800 transition-colors duration-300"
+              >
+                <!-- Enhanced text styling -->
+                Feedback continuo y en tiempo real para mejorar tu pronunciación
+                y gramática instantáneamente.
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex flex-col md:flex-row items-center justify-between gap-12 mb-16"
+            data-aos="fade-right"
+          >
+            <div class="md:w-1/2 text-center pl-20">
+              <!-- Added text-center -->
+              <p
+                class="text-2xl text-blue-600 leading-relaxed font-semibold bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text text-transparent hover:from-blue-600 hover:to-blue-800 transition-colors duration-300"
+              >
+                <!-- Enhanced text styling -->
+                Adaptación a tu nivel y ritmo de aprendizaje mediante IA
+                personalizada.
+              </p>
+            </div>
+            <div class="md:w-1/2 flex justify-center pr-20">
+              <!-- Added flex and justify-center -->
+              <div class="w-100 h-100">
+                <!-- Fixed size container -->
+                <img
+                  src="img/escena_3_gemini.jpeg"
+                  alt="Aprendizaje Adaptativo"
+                  class="w-full h-full object-cover rounded-xl shadow-lg hover:scale-105 transition-all duration-300 hover:shadow-blue-400/50 hover:shadow-xl"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Fourth item - Centered with three images -->
+          <div class="text-center max-w-4xl mx-auto" data-aos="fade-up">
+            <p
+              class="text-2xl text-blue-600 leading-relaxed font-semibold bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text text-transparent hover:from-blue-600 hover:to-blue-800 transition-colors duration-300 mb-12"
+            >
+              Experiencias divertidas y gamificadas que hacen del aprendizaje un
+              juego
+            </p>
+          </div>
+          <!-- Conjunto de 4 imágenes -->
+          <section class="container mx-auto px-4 py-16">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div
+                class="aspect-square w-full overflow-hidden rounded-lg shadow-lg"
+              >
+                <img
+                  src="img/arabe_gemini.jpeg"
+                  alt="FluentWorld Arabic"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div
+                class="aspect-square w-full overflow-hidden rounded-lg shadow-lg"
+              >
+                <img
+                  src="img/brasil_gemini.jpeg"
+                  alt="FluentWorld Portuguese"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div
+                class="aspect-square w-full overflow-hidden rounded-lg shadow-lg"
+              >
+                <img
+                  src="img/japones_gemini.jpeg"
+                  alt="FluentWorld Japanese"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            </div>
+          </section>
+        </div>
       </section>
 
-      <section class="bg-blue-600 text-white py-8 text-center">
-        <h2 class="text-2xl font-bold mb-4">Planes y Precios</h2>
-        <ul class="space-y-4">
-          <li>Suscripción Mensual: $12.99/mes</li>
-          <li>Suscripción Anual: $99.99/año (Ahorra un 35%)</li>
-          <li>
-            Plan Estudiantil: $7.99/mes (Requiere verificación de estudiante)
-          </li>
-          <li>Paquete Familiar: $29.99/mes para hasta 4 usuarios</li>
-        </ul>
+      <!-- Pricing Section -->
+      <section
+        class="bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700 text-white py-16"
+      >
+        <div class="container mx-auto px-4" data-aos="fade-up">
+          <h2
+            class="text-4xl font-extrabold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100"
+          >
+            Planes y Precios
+          </h2>
+          <div
+            class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto"
+          >
+            <!-- Monthly Plan -->
+            <div
+              class="bg-white/10 backdrop-blur-lg rounded-2xl p-8 hover:transform hover:scale-105 transition-all duration-300 border border-white/20"
+            >
+              <h3 class="text-xl font-bold mb-4">Suscripción Mensual</h3>
+              <p class="text-3xl font-extrabold mb-4">
+                $12.99<span class="text-sm font-normal">/mes</span>
+              </p>
+              <ul class="space-y-3 text-sm opacity-90">
+                <li class="flex items-center">
+                  <svg
+                    class="w-5 h-5 mr-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  Acceso completo a la plataforma
+                </li>
+              </ul>
+            </div>
+
+            <!-- Annual Plan -->
+            <div
+              class="bg-white/10 backdrop-blur-lg rounded-2xl p-8 hover:transform hover:scale-105 transition-all duration-300 border border-white/20"
+            >
+              <div
+                class="absolute -top-4 right-4 bg-yellow-400 text-blue-900 text-xs font-bold px-3 py-1 rounded-full"
+              >
+                MEJOR VALOR
+              </div>
+              <h3 class="text-xl font-bold mb-4">Suscripción Anual</h3>
+              <p class="text-3xl font-extrabold mb-4">
+                $99.99<span class="text-sm font-normal">/año</span>
+              </p>
+              <p class="text-sm text-blue-200 mb-4">Ahorra un 35%</p>
+            </div>
+
+            <!-- Student Plan -->
+            <div
+              class="bg-white/10 backdrop-blur-lg rounded-2xl p-8 hover:transform hover:scale-105 transition-all duration-300 border border-white/20"
+            >
+              <h3 class="text-xl font-bold mb-4">Plan Estudiantil</h3>
+              <p class="text-3xl font-extrabold mb-4">
+                $7.99<span class="text-sm font-normal">/mes</span>
+              </p>
+              <p class="text-sm text-blue-200 mb-4">Requiere verificación</p>
+            </div>
+
+            <!-- Family Plan -->
+            <div
+              class="bg-white/10 backdrop-blur-lg rounded-2xl p-8 hover:transform hover:scale-105 transition-all duration-300 border border-white/20"
+            >
+              <h3 class="text-xl font-bold mb-4">Paquete Familiar</h3>
+              <p class="text-3xl font-extrabold mb-4">
+                $29.99<span class="text-sm font-normal">/mes</span>
+              </p>
+              <p class="text-sm text-blue-200 mb-4">Hasta 4 usuarios</p>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section class="text-center py-12">
-        <h2 class="text-2xl font-bold mb-4">
-          ¿Listo para Sumergirte en un Nuevo Idioma?
-        </h2>
-        <p class="mb-4">
-          ¡Empieza hoy: Aprende y explora el mundo con FluentWorld!
-        </p>
-        <button
-          class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700"
-        >
-          Comenzar Ahora
-        </button>
+      <!-- Call to Action Section -->
+      <section
+        class="relative bg-gradient-to-br from-blue-700 to-blue-900 py-24 overflow-hidden"
+      >
+        <div class="absolute inset-0 bg-blue-900/30 backdrop-blur-sm"></div>
+        <!-- Animated background shapes -->
+        <div class="absolute inset-0 opacity-10">
+          <div
+            class="absolute top-0 -left-4 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl animate-blob"
+          ></div>
+          <div
+            class="absolute top-0 -right-4 w-72 h-72 bg-blue-600 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"
+          ></div>
+          <div
+            class="absolute -bottom-8 left-20 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"
+          ></div>
+        </div>
+
+        <div class="container mx-auto px-4 relative">
+          <div class="max-w-3xl mx-auto text-center" data-aos="fade-up">
+            <h2 class="text-5xl font-extrabold mb-8 text-white leading-tight">
+              ¿Listo para Sumergirte en un Nuevo Idioma?
+            </h2>
+            <p class="text-2xl mb-12 text-blue-100 leading-relaxed">
+              Únete a miles de estudiantes que están transformando su manera de
+              aprender idiomas
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <button
+                class="bg-white text-blue-700 px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-50 transition duration-300 transform hover:scale-105 shadow-lg"
+              >
+                Comenzar Prueba Gratuita
+              </button>
+              <button
+                class="border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition duration-300"
+              >
+                Ver Demostración
+              </button>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
     <footer class="bg-gray-800 text-white py-4 text-center">
       <p>&copy; 2025 FluentWorld. Todos los derechos reservados.</p>
     </footer>
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true,
+      });
+    </script>
   </body>
 </html>
